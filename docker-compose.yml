@@ -1,0 +1,9 @@
+services:
+  earthquake:
+    image: golang:1.11.2 
+    volumes:
+      - .:/go/src/earthquake
+    working_dir: /go/src/earthquake
+    command: go run main.go
+    ports:
+      - 8080:8080
